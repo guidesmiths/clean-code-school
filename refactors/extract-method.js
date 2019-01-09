@@ -19,13 +19,9 @@ const before = () => {
 		console.log(`Street ${data.address.street}`);
 		console.log(`ZIP Code ${data.address.zipCode}`);
 	};
-	return {
-		run: () => {
-			printAddress();
-			console.log(`First name: ${data.person.name}`);
-			console.log(`Last name: ${data.person.lastName}`);
-		},
-	};
+	printAddress();
+	console.log(`First name: ${data.person.name}`);
+	console.log(`Last name: ${data.person.lastName}`);
 };
 
 const after = () => {
@@ -37,13 +33,12 @@ const after = () => {
 		console.log(`First name: ${data.person.name}`);
 		console.log(`Last name: ${data.person.lastName}`);
 	};
-	return {
-		run: () => {
-			printAddress();
-			printPerson();
-		},
-	};
+	printAddress();
+	printPerson();
 };
 
-before().run();
-after().run();
+before();
+console.log(`
+
+`);
+after();
