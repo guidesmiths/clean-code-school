@@ -1,0 +1,10 @@
+{
+	"address": {
+		"street": "calle de la Alameda",
+		"zipCode": "28014"
+	},
+	"person": {
+		"name": "Thomas",
+		"lastName": "Anderson"
+	}
+}
