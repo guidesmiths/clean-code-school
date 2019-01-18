@@ -12,44 +12,43 @@
   (unless you plan to add many more state transitions in the future).
 */
 
-const states = {
-  Red: {
-    colour: 'red',
-    duration: '1 minute',
-  },
-  Green: {
-    colour: 'green',
-    duration: '10 seconds',
-  },
-  Yellow: {
-    colour: 'yellow',
-    duration: '1 minute',
-  },
+const MAX_NUMBER_OF_CHANGES = 10;
+
+const useReducer = (reducer, initialState, initialAction) => {
+  state = lightTransition(initialState);
+
+  function lightSend(event) {
+    const nextState = lightTransition(state, event);
+    state = nextState;
+  }
+
+  return { lightSend };
 };
 
-const TrafficLight =  function() {
-  let currentState = states.Red;
+const trafficLightMachine = {
+  initial: { to: 'green', duration: '1 minute' },
+  states: {
+    green: { on: { GO: { to: 'yellow', duration: '10 seconds' } } },
+    yellow: { on: { GO: { to: 'red', duration: '1 minute' } } },
+    red: { on: { GO: { to: 'green', duration: '1 minute' } } }
+  }
+};
 
-  this.change = function () {
-    // state machine handling transitions between states
-    const nextStateTable = {
-      red: states.Green,
-      yellow: states.Red,
-      green: states.Yellow,
-    };
-    currentState = nextStateTable[currentState.colour];
-  };
+const lightTransition = (state, event) => {
+  return trafficLightMachine.states[state.to].on[event] || state;
+};
 
-  this.print = function () {
-    console.log(`${currentState.colour} --> for ${currentState.duration}`);
-  };
-}
+const TrafficLight = function() {
+  let { lightSend } = useReducer(lightTransition, trafficLightMachine.initial);
+  this.lightSend = lightSend;
+  this.lightLog = () => console.log(`${state.to} --> for ${state.duration}`);
+};
 
 const run = () => {
-  var light = new TrafficLight();
-  for (i = 0; i <= 11; i++) {
-    light.print();
-    light.change();
+  const light = new TrafficLight();
+  for (let index = 1; index < MAX_NUMBER_OF_CHANGES; index++) {
+    light.lightLog();
+    light.lightSend('GO');
   }
 };
 
