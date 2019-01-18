@@ -7,7 +7,7 @@ const TrafficLight = function () {
  
     this.change = () => {
       if(currentState === 'red') {
-        currentState = 'greem';
+        currentState = 'green';
         console.log(`${currentState} --> for 10 seconds`);
       } else if (currentState === 'yellow') {
         currentState = 'red';
