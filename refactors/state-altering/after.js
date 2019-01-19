@@ -30,14 +30,17 @@ const states = {
 const TrafficLight =  function() {
   let currentState = states.Red;
 
+  // state machine handling transitions between states
+  const nextStateTable = {
+    red: states.Green,
+    yellow: states.Red,
+    green: states.Yellow,
+  };
+
+  const calculateNextState = () => nextStateTable[currentState.colour];
+
   this.change = function () {
-    // state machine handling transitions between states
-    const nextStateTable = {
-      red: states.Green,
-      yellow: states.Red,
-      green: states.Yellow,
-    };
-    currentState = nextStateTable[currentState.colour];
+    currentState = calculateNextState();
   };
 
   this.print = function () {
