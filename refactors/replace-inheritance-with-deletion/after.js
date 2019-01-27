@@ -1,7 +1,23 @@
 /* 
+  Composition over inheritance (or composite reuse principle) in object-oriented programming (OOP) 
+  is the principle that classes should achieve polymorphic behavior and code reuse by their composition
+  (by containing instances of other classes that implement the desired functionality) rather than inheritance from a base or parent class.
 
-  TODO:
-    - Description why Composition over Inheritance
+  To favor composition over inheritance is a design principle that gives the design higher flexibility. 
+  In other words, it is better to compose what an object can do than extend what it is.
+  Additionally, it avoids problems often associated with relatively minor changes to an 
+  inheritance-based model that includes several generations of classes
+
+  JavaScript’s base on prototypes not classes. Classes create Hierarchical class taxonomies which lead us to serial drawbacks:
+  - The tight coupling problem
+  - Inflexible hierarchy problem
+  - The duplication by necessity problem
+  - The Gorilla/banana problem. You want the banana but isntead you've got the gorilla holding the banana within the jaile.
+
+  Composition has less tight coupling than Classes, using the factory pattern. 
+  All of the most popular libraries and frameworks for JavaScript make heavy use of factory functions.
+
+  More info: https://en.wikipedia.org/wiki/Composition_over_inheritance
 */
 
 const canSpeak = state => ({
