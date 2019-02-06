@@ -1,87 +1,27 @@
+/* 
+Benefits
+More readable code. Instead of a hodgepodge of parameters, you see a single object with a comprehensible name.
 
-/*
-Why Refactor
-Identical groups of parameters are often encountered in multiple methods. This causes code duplication of both the parameters themselves and of related operations. By consolidating parameters in a single class, you can also move the methods for handling this data there as well, freeing the other methods from this code.
+Identical groups of parameters scattered here and there create their own kind of code duplication: while identical code isn’t being called, identical groups of parameters and arguments are constantly encountered.
 */
 
 
-class Pin {
-  constructor(lat, long) {
-    this.latitude = lat;
-    this.longitude = long;
-  }
-
-  getCoordinates() {
-    return {
-      latitude: this.lat,
-      longitude: this.long,
-    }
-  }
-};
-
-
-const displayPin = (pin) => {
+const displayPin = (lat, long) => {
   //Draw a pin in a map.
 }
 
-const selectPin = (pin) => {
+const selectPin = (lat, long) => {
   //Select a pin in a map.
 }
 
-const deletetPin = (pin) => {
+const deletetPin = (lat, long) => {
   //Select a pin in a map.
 }
 
-const createLine = (xPin, yPin) => {
-  displayPin(xPin);
-  displayPin(yPin);
+
+
+const createLine = (xlat, xlong, ylat, ylong) => {
+  displayPin(xlat, xlong);
+  displayPin(ylat, ylong);
   ///...Create a line between;
 }
-
-
-/* 
-Drawbacks
-If you move only data to a new class and don’t plan to move any behaviors or related operations there, this begins to smell of a Data Class. 
-
-It’s a normal thing when a newly created class contains only a few public fields (and maybe even a handful of getters/setters). But the true power of objects is that they can contain behavior types or operations on their data.
-*/
-
-
-class Pin {
-  constructor(lat, long, colour = '#F00', comment = null, map = null) {
-    this.latitude = lat;
-    this.longitude = long;
-    this.colour = colour;
-    this.comment = comment;
-    this.map = map;
-  }
-
-  getCoordinates() {
-    return {
-      latitude: this.lat,
-      longitude: this.long,
-    }
-  }
-
-  addComment(comment) {
-    this.comment = comment;
-  }
-
-  getComment() {
-    return this.comment;
-  }
-
-  setColour(col) {
-    this.colour = col
-  }
-
-  isOverSea() {
-    // Calculate if pin is over the sea using this.map
-  }
-
-  whatCountry() {
-    // Return Country if is over any country using this.map
-  }
-
-  //...
-};
