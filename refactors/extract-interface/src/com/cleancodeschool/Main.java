@@ -1,43 +1,14 @@
 package com.cleancodeschool;
 
-/**
- * BEFORE APPLYING EXTRACT INTERFACE REFACTOR
- */
-class UserController {
-    String findById(final Long id) { return "User with id: " + id.toString();};
-}
-
-class ImageController {
-    String findById(final Long id) { return "Image with id: " + id.toString();};
-}
-
-/**
- * AFTER APPLYING EXTRACT INTERFACE REFACT
- */
-interface ModelController {
-    String findById(final Long id);
-}
-
-class VideoController implements ModelController{
-
-    @Override
-    public String findById(Long id) {
-        return "Video with id: " + id.toString();
-    }
-}
-
-class SongController implements ModelController {
-
-    @Override
-    public String findById(Long id) {
-        return "Song with id: " + id.toString();
-    }
-}
-
+import com.cleancodeschool.after.ModelController;
+import com.cleancodeschool.after.SongController;
+import com.cleancodeschool.after.VideoController;
+import com.cleancodeschool.before.ImageController;
+import com.cleancodeschool.before.UserController;
 
 public class Main {
 
-    static void doWhateverWithAnyModelObj(ModelController modelController,final Long id) {
+    static void doWhateverWithAnyModelObj(ModelController modelController, final Long id) {
         System.out.println(modelController.findById(id));
     }
 
