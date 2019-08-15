@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+        "title": "Vertigo",
+        "director": "Alfred Hitchcock",
+        "release_year": 1958,
+        "classifications": ["thriller"],
+        "box_office": {
+            "domestic": "$3,200,000",
+            "international": "$71,996"
+        },
+        "rotten_tomatoes_review": 96
+	},
+	{
+		"id": 2,
+        "title": "The Shining",
+        "director": "Stanley Kubrick",
+        "release_year": 1980,
+        "classifications": ["thriller", "horror"],
+        "box_office": {
+            "domestic": "$44,017,374",
+            "international": "$710,853"
+        },
+        "rotten_tomatoes_review": 87
+	},
+	{
+		"id": 3,
+        "title": "Seven",
+        "director": "David Fincher",
+        "release_year": 1995,
+        "classifications": ["thriller", "crime"],
+        "box_office": {
+            "domestic": "€88,955,626",
+            "international": "€202,564,320"
+        },
+        "rotten_tomatoes_review": 81
+	},
+	{
+		"id": 4,
+        "title": "The Thing",
+        "director": "John Carpenter",
+        "release_year": 1982,
+        "classifications": ["scifi", "horror"],
+        "box_office": {
+            "domestic": "$19,629,760",
+            "international": "$3,107,897"
+        },
+        "rotten_tomatoes_review": 84
+	}
+]

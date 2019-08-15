@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Carbon",
+    "z": 6,
+    "n": 12,
+    "weight": 12,
+    "lackOfMassInKg": 1.643400000000003e-28,
+    "bindingEnergyInJul": 1.4790600000000028e-11,
+    "bindingEnergyPerNucleonInJul": 7.693577100000014
+  },
+  {
+    "name": "Silicon",
+    "z": 14,
+    "n": 28,
+    "weight": 27.976926,
+    "lackOfMassInKg": 4.217628400000046e-28,
+    "bindingEnergyInJul": 3.795865560000042e-11,
+    "bindingEnergyPerNucleonInJul": 8.462068866257237
+  },
+  {
+    "name": "Phosphorus",
+    "z": 15,
+    "n": 31,
+    "weight": 30.973762,
+    "lackOfMassInKg": 4.691790799999977e-28,
+    "bindingEnergyInJul": 4.2226117199999793e-11,
+    "bindingEnergyPerNucleonInJul": 8.502433018141895
+  },
+  {
+    "name": "Iron-56",
+    "z": 26,
+    "n": 56,
+    "weight": 55.9349375,
+    "lackOfMassInKg": 8.79239750000001e-28,
+    "bindingEnergyInJul": 7.913157750000009e-11,
+    "bindingEnergyPerNucleonInJul": 8.820344763482153
+  },
+  {
+    "name": "Uranium-235",
+    "z": 92,
+    "n": 235,
+    "weight": 235.0439299,
+    "lackOfMassInKg": 3.200430366000017e-27,
+    "bindingEnergyInJul": 2.880387329400015e-10,
+    "bindingEnergyPerNucleonInJul": 7.650799025580806
+  }
+]

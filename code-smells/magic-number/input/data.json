@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Carbon",
+    "z": 6,
+    "n": 12,
+    "weight": 12
+  },
+  {
+    "name": "Silicon",
+    "z": 14,
+    "n": 28,
+    "weight": 27.976926
+  },
+  {
+    "name": "Phosphorus",
+    "z": 15,
+    "n": 31,
+    "weight": 30.973762
+  },
+  {
+    "name": "Iron-56",
+    "z": 26,
+    "n": 56,
+    "weight": 55.9349375
+  },
+  {
+    "name": "Uranium-235",
+    "z": 92,
+    "n": 235,
+    "weight": 235.0439299
+  }
+]
