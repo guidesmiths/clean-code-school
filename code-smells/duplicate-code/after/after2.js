@@ -1,5 +1,6 @@
 /*
 Solution:
+  Extract Method
 */
 
 const fixDecimals = require('./utils');

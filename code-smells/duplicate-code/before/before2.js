@@ -1,6 +1,6 @@
 /*
 Problem:
-Two code fragments look almost identical.
+  Two code fragments look almost identical.
 */
 
 const extractDecimals = (amount) => {
