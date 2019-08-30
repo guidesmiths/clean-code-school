@@ -1,0 +1,19 @@
+{
+  "name": "clean-code-school_code-smells_comments",
+  "version": "1.0.0",
+  "description": "Code that seems to have no purpose should not be there smells like dispensability.",
+  "main": "after.js",
+  "scripts": {
+    "generate-asyncapi-docs": "node_modules/asyncapi-generator/cli.js exceptions/asyncapi/asyncapi.yml html -o exceptions/asyncapi/generated",
+    "generate-api-docs": "./node_modules/.bin/jsdoc after/utils_api.js --destination after/api/generated"
+  },
+  "author": "Íñigo Marquínez <inigo.marquinez@guidesmiths.com>",
+  "dependencies": {
+    "asyncapi-generator": "^0.8.0",
+    "express": "^4.17.1",
+    "express-swagger-generator": "^1.1.15"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
+  }
+}

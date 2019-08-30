@@ -1,0 +1,187 @@
+asyncapi: "2.0.0-rc1"
+id: "infinitas:com:integrations:he-groups-api"
+info:
+  title: HE Groups API
+  version: "1.0.0"
+  description: Service responsable for management of groups
+
+servers:
+  - url: "helearning-{environment}-bus.servicebus.windows.net"
+    protocol: Service Bus
+    description: Azure Bus Broker
+    variables:
+      environment:
+        description: Environment in which the service is deployed
+        enum:
+          - "development"
+          - "staging"
+          - "production"
+
+defaultContentType: application/json
+
+channels:
+  group-api.v1.group.created:
+    publish:
+      summary: Publish information about a new created group
+      operationId: publishGroupsAccountCreated
+      message:
+        $ref: "#/components/messages/groups-api-group-created-message"
+  group-api.v1.group.updated:
+    publish:
+      summary: Publish information about a group update
+      operationId: publishGroupsAccountUpdated
+      message:
+        $ref: "#/components/messages/groups-api-group-updated-message"
+  registration-api.v1.account.created:
+    subscribe:
+      summary: Subscribe to information about created accounts
+      operationId: subsribeAccountCreated
+      message:
+        $ref: "#/components/messages/registration-api-account-created-message"
+  registration-api.v1.account.updated:
+    subscribe:
+      summary: Subscribe to information about existing accounts getting updated
+      operationId: subsribeAccountUpdated
+      message:
+        $ref: "#/components/messages/registration-api-account-updated-message"
+
+components:
+  messages:
+    groups-api-group-created-message:
+      name: groupsAPI
+      title: groupsAPI
+      summary: groupsAPI
+      contentType: application/json
+      payload:
+        $ref: "#/components/schemas/groups-api-group-created-schema"
+    groups-api-group-updated-message:
+      name: groupsAPI
+      title: groupsAPI
+      summary: groupsAPI
+      contentType: application/json
+      payload:
+        $ref: "#/components/schemas/groups-api-group-updated-schema"
+    registration-api-account-created-message:
+      name: registrationAPI
+      title: registrationAPI
+      summary: registrationAPI
+      contentType: application/json
+      payload:
+        $ref: "#/components/schemas/registration-api-account-created-schema"
+    registration-api-account-updated-message:
+      name: registrationAPI
+      title: registrationAPI
+      summary: registrationAPI
+      contentType: application/json
+      payload:
+        $ref: "#/components/schemas/registration-api-account-updated-schema"
+  schemas:
+    groups-api-group-created-schema:
+      type: object
+      required:
+      - id
+      - name
+      - token
+      properties:
+        id:
+          type: number
+          description: Unique identifier of the new group 
+        name: 
+          type: string
+          description: Name of the new group
+        token:
+          type: string
+          description: Unique token of the new group
+    groups-api-group-updated-schema:
+      type: object
+      required:
+      - id
+      - name
+      - token
+      properties:
+        id:
+          type: number
+          description: Unique identifier of the group 
+        name: 
+          type: string
+          description: Name of the group
+        token:
+          type: string
+          description: Unique token of the group
+    registration-api-account-created-schema:
+      type: object
+      required:
+      - id
+      - role_name
+      - email
+      - name
+      - token
+      - first_name
+      - middle_name
+      - last_name
+      - active
+      - uuid
+      - invitationLink
+      properties:
+        id:
+          type: number
+          description: Id of the account
+        role_name:
+          type: string
+          description: Name of the role of the account (e.g. Teacher, Student, Admin).
+        email:
+          type: string
+          format: email
+          description: Email of the account
+        first_name:
+          type: string
+          description: First name of the user
+        middle_name:
+          type: string
+          description: Middle name of the contact
+        last_name:
+          type: string
+          description: Last name of the user
+        active:
+          type: boolean
+          description: Current state of the account (e.g. true, false)
+        uuid:
+          type: string
+          description: Identification of the user for the email service
+        invitationLink: 
+          type: string
+          description: Invitation link for the user sent by the email service
+    registration-api-account-updated-schema:
+      type: object
+      required:
+      - id
+      - role_name
+      - email
+      - first_name
+      - middle_name
+      - last_name
+      - active
+      properties:
+        id:
+          type: number
+          description: Id of the account
+        role_name:
+          type: string
+          description: Name of the role of the account (e.g. Teacher, Student, Admin).
+        email:
+          type: string
+          format: email
+          description: Email of the account
+        first_name:
+          type: string
+          description: First name of the user
+        middle_name:
+          type: string
+          description: Middle name of the contact
+        last_name:
+          type: string
+          description: Last name of the user
+        active:
+          type: boolean
+          description: Current state of the account (e.g. true, false)
+    
