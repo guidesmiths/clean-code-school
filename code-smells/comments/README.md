@@ -9,7 +9,6 @@
 * 4. [Exceptions](#Exceptions)
 	* 4.1. [JSDoc](#JSDoc)
 	* 4.2. [Swagger](#Swagger)
-	* 4.3. [AsyncAPI](#AsyncAPI)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -98,23 +97,3 @@ node index.js
 ```
 
 And going [here](http://localhost:3000/docs/api).
-
-
-###  4.3. <a name='AsyncAPI'></a>AsyncAPI
-
-[Asyncapi](https://www.asyncapi.com/)
-
-To **generate** Markdown documentation, Node.js code, HTML documentation, you can use *asyncapi-generator*: [GitHub](https://github.com/asyncapi/generator) | [npm](https://www.npmjs.com/package/asyncapi-generator).
-
-To **validate** messages following an AsyncAPI schema you can use *asyncapi-validator*: [GitHub](https://github.com/WaleedAshraf/asyncapi-validator) | [npm](https://www.npmjs.com/package/asyncapi-validator).
-
-In this example, there is a small AsyncAPI [here](./exceptions/asyncapi/asyncapi.yml).
-
-The documentation can be generated running:
-
-```bash
-cd code-smells/comments
-npm run generate-asyncapi-docs
-```
-
-After running that command, the generated documentation can be checked [here](./exceptions/asyncapi/generated/index.html).
