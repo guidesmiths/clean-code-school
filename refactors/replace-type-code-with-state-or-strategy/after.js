@@ -51,7 +51,7 @@ const exampleWithClasses = () => {
 }
 
 const exampleWithFunctions = () => {
-  console.log('Example using classes ---------------------');
+  console.log('Example using functions ---------------------');
 
   const Player = (name, position) => {
     const myName = name;
