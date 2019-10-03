@@ -5,7 +5,7 @@ const { afterPrinter } = require('./helper');
 // implements private members
 function makePhone(unformattedNumber) {
     this.phone = unformattedNumber;
-    const chunkSize = 3;
+    this.chunkSize = 3;
 
     const chunkPhone = (str, size) => str.match(new RegExp('.{1,' + size + '}', 'g')).join(' ');
     const getCountryCode = () => unformattedNumber.substring(0, 3);
