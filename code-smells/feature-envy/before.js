@@ -25,7 +25,7 @@ class User {
         this.lastName = lastName;
         this.dni = dni;
         this.email = email;
-        this.phone = `(${phone.countryCode}) ${phone.areaCode} ${phone.baseNumber}`
+        this.phone = `${phone.countryCode} ${phone.areaCode} ${phone.baseNumber}`
     }
 
     get userName() { return this.name; }
@@ -35,7 +35,7 @@ class User {
     get userPhone() { return this.phone; }
 }
 
-const phone = new Phone('+34635538973');
-const user1 = new User('Fernando', 'Aparicio Galende', '12345678S', phone, 'fernando.aparicio@guidesmiths.com');
+const phone1 = new Phone('+34635538973');
+const user1 = new User('Fernando', 'Aparicio Galende', '12345678S', phone1, 'fernando.aparicio@guidesmiths.com');
 
-beforePrinter(user1)
+beforePrinter(user1, phone1)
