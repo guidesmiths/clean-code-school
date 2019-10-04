@@ -42,7 +42,8 @@ function makeUser(name, lastName, dni, phone, email) {
 };
 
 const phone1 = makePhone('+34635538973');
-const user1 = makeUser('Fernando', 'Aparicio Galende', '12345678S', phone1.getFormatPhone(), 'fernando.aparicio@guidesmiths.com');
+const formatedNumber = phone1.getFormatPhone()
+const user1 = makeUser('Fernando', 'Aparicio Galende', '12345678S', formatedNumber, 'fernando.aparicio@guidesmiths.com');
 
 afterPrinter(user1, phone1)
 
