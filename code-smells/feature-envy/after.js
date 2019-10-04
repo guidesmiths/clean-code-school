@@ -41,8 +41,6 @@ const formatedNumber = phone1.getFormatPhone()
 const user1 = makeUser('Fernando', 'Aparicio Galende', '12345678S', formatedNumber, 'fernando.aparicio@guidesmiths.com');
 
 afterPrinter(user1, phone1)
-
 console.log(`\nThe private member gets undefined: ${user1.phone}`);
-
 delete user1.phone;
 console.log(`\nThe private member can't delete: ${user1.getPhone()}`);
