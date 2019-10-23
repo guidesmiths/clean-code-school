@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Before Divergent</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: #dadada;
+      font-family: sans-serif;
+    }
+    #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root .card {
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main id="root"></main>
+  <script type="module">
+    import Account from './after.js';
+    const myAccount = Account({
+      money: 12,
+      balance: 20,
+    });
+
+    myAccount.renderHtml('root');
+
+    setTimeout(() => {
+      myAccount.addMoney(10);
+      myAccount.addBalance(100);
+      myAccount.renderHtml('root');
+    }, 2000);
+  </script>
+</body>
+</html>
