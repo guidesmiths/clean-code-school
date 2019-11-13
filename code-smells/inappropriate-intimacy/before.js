@@ -1,4 +1,7 @@
 /*
+Signs and Symptoms
+One class uses the internal fields and methods of another class.
+
 Reasons for the Problem
 Keep a close eye on classes that spend too much time together. Good classes should know as little about each other as possible. Such classes are easier to maintain and reuse.
 
@@ -80,9 +83,9 @@ const Order = ({id, value, client, product}) => {
 
 
 
+
 const Summary = ({order}) => {
     this.order = order;
-
 
     printSummary = () => {
         let client = order.getClient();
