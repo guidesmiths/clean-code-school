@@ -1,23 +1,26 @@
 const bankAccount = {
   amount: 10,
-  getBalance: () => console.log(`${bankAccount.amount} $`)
+  getBalance: () => console.log(`Your balance is ${bankAccount.amount} $`)
 }
 
-const isUnderBudget = () => amount <= 500
+const isUnderBudget = () => bankAccount.amount <= 0;
 
-const transfer = () => {
+const transfer = (toSend) => {
   if(isUnderBudget()) {
-    console.log("Mininum balance shuold be over 500");
+    console.log("Mininum balance shuold be over 0");
   }
 
-  amount = amount+creditAmount;
+  bankAccount.amount -=toSend;
   bankAccount.getBalance();
 }
 
 
 const checkYourBalance = () => {
   if(isUnderBudget()) {
-    console.log("amount should be over 500");
+    console.log("amount should be over 0");
   }
   bankAccount.getBalance();
 }
+
+checkYourBalance();
+transfer(2);
