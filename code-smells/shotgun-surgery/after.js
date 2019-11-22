@@ -7,7 +7,7 @@ const isUnderBudget = () => bankAccount.amount <= 0;
 
 const transfer = (toSend) => {
   if(isUnderBudget()) {
-    console.log("Mininum balance shuold be over 0");
+    console.log("Minimum balance should be over 0");
   }
 
   bankAccount.amount -=toSend;

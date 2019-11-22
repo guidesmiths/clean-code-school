@@ -4,7 +4,7 @@ const bankAccount = {
 
 const transfer = (toSend) => {
   if (bankAccount.amount <= 0) {
-    console.log("Mininum balance shuold be over 0");
+    console.log("Minimum balance should be over 0");
   }
 
   bankAccount.amount -= toSend;
