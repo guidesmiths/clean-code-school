@@ -1,0 +1,1 @@
+# guidesmiths-codesmell-uncommunicative-name
