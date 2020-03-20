@@ -23,10 +23,11 @@ class Human {
 
 /* MAIN */
 const human = new Human();
+const food = new Sausage(2);
 
 const haveBreakfast = () => {
-  if (!human.getBadMemories().includes(Sausage.name)) {
-    human.getDigestionSystem().getPeritoneum().getStomach().addContent(new Sausage(2));
+  if (!human.getBadMemories().includes(food.constructor.name)) {
+    human.getDigestionSystem().getPeritoneum().getStomach().addContent(food);
   }
 
   console.log("Digesting", human.getDigestionSystem().getPeritoneum().getStomach().getContent());
