@@ -1,6 +1,14 @@
-const { DigestionSystem } = require('./commons/systems');
+const { Peritoneum } = require('./commons/organs');
 const { Sausage, Cheese } = require('./commons/food');
+class DigestionSystem {
+  constructor() {
+    this.peritoneum = new Peritoneum();
+    // ... other organs
+  }
 
+  //just getters and setters
+  getPeritoneum() { return this.peritoneum; }
+}
 class Human {
   constructor() {
     this.badMemories = [Cheese.name];
@@ -21,7 +29,7 @@ const haveBreakfast = () => {
     human.getDigestionSystem().getPeritoneum().getStomach().addContent(new Sausage(2));
   }
 
-  console.log("Stomach content", human.getDigestionSystem().getPeritoneum().getStomach().getContent());
+  console.log("Digesting", human.getDigestionSystem().getPeritoneum().getStomach().getContent());
 };
 
 haveBreakfast();
