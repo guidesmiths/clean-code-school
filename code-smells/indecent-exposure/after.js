@@ -33,10 +33,10 @@ const buildJail = () => {
 const createPolice = jail => {
 // Understands punishments
 
-    const report = prisoner => {
+    const report = criminal => {
         // would understand how to process "death"
-        if (prisoner.punishment === 'prison') {
-            jail.addPrisoner(prisoner); // details hidden
+        if (criminal.punishment === 'prison') {
+            jail.addPrisoner(criminal); // details hidden
         }
     };
 
@@ -45,22 +45,22 @@ const createPolice = jail => {
     };
 };
 
-const createPrisoner = (name, punishment) => ({
+const createCriminal = (name, punishment) => ({
     name,
     punishment,
     feed: () => { console.log(`${name} just ate!`) },
 });
 
 (() => {
-    const prisoners = [
-        createPrisoner('Joe Dalton', 'prison'),
-        createPrisoner('William Dalton', 'death'),
-        createPrisoner('Jack Dalton', 'prison'),
-        createPrisoner('Averell Dalton', 'prison')
+    const criminals = [
+        createCriminal('Joe Dalton', 'prison'),
+        createCriminal('William Dalton', 'death'),
+        createCriminal('Jack Dalton', 'prison'),
+        createCriminal('Averell Dalton', 'prison')
     ];
 
     const jail = buildJail(); // internals also exposed here!
     const police = createPolice(jail);
-    prisoners.forEach(police.report);
+    criminals.forEach(police.report);
     setInterval(() => {}, 5000); // let it hang
 })();
