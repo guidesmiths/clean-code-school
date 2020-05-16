@@ -48,6 +48,8 @@ const getAnimalEmoji = animal => {
 };
 ```
 
+If we focus on JavaScript more interesting examples can be found in the [`before.js`](./before.js) and [`after.js`](./after.js) files.
+
 ## Refactoring
 
 The first thing to do is to **plan before starting a conditional block** or look for an alternative if it is starting to grow. A common solution would be to extract the conditionals into well-named methods with the [Extract Method](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/extract-method).
