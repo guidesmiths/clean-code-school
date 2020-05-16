@@ -70,4 +70,7 @@ const getDragonEmoji = () => '🐲';
 - [Conditional Complexity on Pragmatic Ways](https://www.pragmaticways.com/31-code-smells-you-must-know/#17_Conditional_Complexity)
 - [Extract method on Clean Code School](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/extract-method)
 - [Extract method on Refactoring Guru](https://refactoring.guru/extract-method)
+- [5 tips to write better conditionals](https://scotch.io/bar-talk/5-tips-to-write-better-conditionals-in-javascript)
 - [This doc template](https://gist.github.com/reymon359/1dbeab82c0323cc2d6e0d010ba71ebe4)
+- [Tips to write better Conditionals](https://dev.to/hellomeghna/tips-to-write-better-conditionals-in-javascript-2189)
+
