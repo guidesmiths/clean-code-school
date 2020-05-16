@@ -65,8 +65,7 @@ const getDragonEmoji = () => '🐲';
 
 ## References
 
-TODO: Add some useful references for more info about the code smell or topics that you have previously mentioned. Examples:
-
 - [Conditional Complexity on Pragmatic Ways](https://www.pragmaticways.com/31-code-smells-you-must-know/#17_Conditional_Complexity)
+- [Extract method on Clean Code School](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/extract-method)
+- [Extract method on Refactoring Guru](https://refactoring.guru/extract-method)
 - [This doc template](https://gist.github.com/reymon359/1dbeab82c0323cc2d6e0d010ba71ebe4)
-- [Refactoring Guru](<Link to your code smell in refactoring.guru>)
