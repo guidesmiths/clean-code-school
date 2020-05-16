@@ -19,3 +19,5 @@ const getAnimalEmoji = animal => {
     return '🐲';
   }
 };
+
+console.log(getAnimalEmoji('dragon'));
