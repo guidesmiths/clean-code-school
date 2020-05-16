@@ -24,7 +24,29 @@ This code smell refers to those large conditional blocks of **10+** `if-else` st
 
 ## Recognition. Signs and Symptoms
 
-TODO: Add an explanation or/and a code example on how to spot the code smell.
+As mentioned before this code smell refers to **large blocks of conditionals** so it is fairly easy to detect. Have a look at this example:
+
+```js
+const getAnimalEmoji = animal => {
+  if (animal === 'dog') {
+    return '🐶';
+  } else if (animal === 'cat') {
+    return '🐱';
+  } else if (animal === 'frog') {
+    return '🐸';
+  } else if (animal === 'panda') {
+    return '🐼';
+  } else if (animal === 'giraffe') {
+    return '🦒';
+  } else if (animal === 'monkey') {
+    return '🐵';
+  } else if (animal === 'unicorn') {
+    return '🦄';
+  } else if (animal === 'dragon') {
+    return '🐲';
+  }
+};
+```
 
 ## Refactoring
 
