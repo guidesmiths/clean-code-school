@@ -1,6 +1,4 @@
-# Title
-
-TODO: Change the Title with your Code Smell name.
+# Conditional Complexity
 
 ## Table of Contents
 
@@ -14,7 +12,7 @@ TODO: Change the Title with your Code Smell name.
 
 TODO: Check the type of your Code smell.
 
-- [ ] Bloaters
+- [x] Bloaters
 - [ ] Object-Orientation Abusers
 - [ ] Change Preventers
 - [ ] Dispensables
@@ -22,7 +20,7 @@ TODO: Check the type of your Code smell.
 
 ## Description
 
-TODO: Add a description (with a small code example) on understanding the code smell.
+TODO: Add a description to understand the code smell.
 
 ## Recognition. Signs and Symptoms
 
