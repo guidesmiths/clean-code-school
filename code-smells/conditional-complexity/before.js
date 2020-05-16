@@ -1,3 +1,5 @@
+/* Before using Extract Method */
+
 const getAnimalEmoji = animal => {
   if (animal === 'dog') {
     return '🐶';

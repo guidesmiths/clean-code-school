@@ -1,4 +1,4 @@
-/* Extract method */
+/* After using Extract Method */
 
 const getDogEmoji = () => '🐶';
 const getCatEmoji = () => '🐱';
