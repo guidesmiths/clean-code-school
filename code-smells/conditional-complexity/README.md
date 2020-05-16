@@ -34,5 +34,6 @@ TODO: Explain how to refactor and fix it by referencing refactoring methods.
 
 TODO: Add some useful references for more info about the code smell or topics that you have previously mentioned. Examples:
 
+- [Conditional Complexity on Pragmatic Ways](https://www.pragmaticways.com/31-code-smells-you-must-know/#17_Conditional_Complexity)
 - [This doc template](https://gist.github.com/reymon359/1dbeab82c0323cc2d6e0d010ba71ebe4)
 - [Refactoring Guru](<Link to your code smell in refactoring.guru>)
