@@ -20,7 +20,7 @@ TODO: Check the type of your Code smell.
 
 ## Description
 
-TODO: Add a description to understand the code smell.
+This code smell refers to those large conditional blocks of **10+** `if-else` statements we all have seen. These blocks start out relatively **small then grow** with as new requirements and features are brought in.They are usually a result of a **lack of design planning**.
 
 ## Recognition. Signs and Symptoms
 
