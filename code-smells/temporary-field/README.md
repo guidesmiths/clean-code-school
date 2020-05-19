@@ -12,7 +12,7 @@ First described in [*Refactoring*, Martin Fowler et al., Addison-Wesley 1999. p.
 
 Being the explanation pretty straightforward, the book does not provide us with an example.
 
-## Sings and Symptoms
+## Signs and Symptoms
 
 As described in *Refactoring*, this code smell arises when we have an object with variables that get their values under certain circumstances. For example, when having a method or function that requires a long list of parameters to do some computation or implement an algorithm. To avoid this situation, we decide to include them as fields or propeties in the class.
 
