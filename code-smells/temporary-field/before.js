@@ -41,7 +41,7 @@ const initEstimator = defaultEstimate => {
     }
 
     // variance: sum(xi - mean)^2 / N
-    // standardDeviation: sqrt(mean)
+    // standardDeviation: sqrt(variance)
     // (mean - standardDeviation, mean + standardDeviation)
     const calculateStandarDeviation = () => {
         // First dependecy: durations
