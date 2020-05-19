@@ -19,5 +19,12 @@ const getAnimalEmoji = animal => {
     return '🐲';
   }
 };
-
 console.log(getAnimalEmoji('dragon'));
+
+/* Before Array.includes */
+const printMyAnimal = animal => {
+  if (animal === 'dog' || animal === 'cat') {
+    console.log(`I have a ${animal}`);
+  }
+}
+console.log(printMyAnimal('dog'))
