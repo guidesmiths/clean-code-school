@@ -21,7 +21,7 @@ const getAnimalEmoji = (animal) => {
 };
 console.log(getAnimalEmoji('dragon')); // '🐲'
 
-/* Before Array.includes 
+/* Before using Array.includes 
 
 If we will keep extending the statement with more 
 OR statements, the code will get harder to maintain */
@@ -33,7 +33,7 @@ const printMyAnimal = (animal) => {
 };
 console.log(printMyAnimal('dog'));
 
-/* Before Early exit / Return early 
+/* Before using Early exit / Return early 
 
 What if instead of the animal as a simple string, 
 it's an object with certain properties. */
@@ -71,3 +71,4 @@ console.log(printAnimalDetails({ type: 'dog', name: 'Lucy' })); // 'No animal ge
 console.log(
 	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
+

@@ -10,7 +10,7 @@ const getUnicornEmoji = () => '🦄';
 const getDragonEmoji = () => '🐲';
 console.log(getFrogEmoji()); // '🐸'
 
-/* After Array.includes 
+/* After using Array.includes 
 
 We can rewrite the conditional 
 above by using Array.includes */
@@ -24,7 +24,7 @@ const printMyAnimal = (animal) => {
 };
 console.log(printAnimals('hamster'));
 
-/* After Early exit / Return early 
+/* After using Early exit / Return early 
 
 We can refactor printAnimalDetails with ternary operators, 
 && conditions, etc. but instead let's write more precise code 
