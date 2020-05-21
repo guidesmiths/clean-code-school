@@ -72,7 +72,7 @@ console.log(
 	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
 
-/* Before using Object Literal or Map
+/* Before using Object Literal
 
 Here we will use a switch case to find fruits by color */
 

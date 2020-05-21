@@ -43,3 +43,17 @@ console.log(printAnimalDetails({ type: 'dog', gender: 'female' })); // 'No anima
 console.log(
 	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
+
+/* After using Object Literal
+
+The same result can be achieved with object literal with cleaner syntax */
+
+const colorFruits = {
+	red: ['apple', 'strawberry'],
+	yellow: ['banana', 'pineapple'],
+	purple: ['grape', 'plum'],
+};
+const printFruits = (color) => colorFruits[color] || [];
+console.log(printFruits(null)); // []
+console.log(printFruits('yellow')); // ['banana', 'pineapple']
+
