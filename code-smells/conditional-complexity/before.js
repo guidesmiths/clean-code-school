@@ -72,3 +72,21 @@ console.log(
 	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
 
+/* Before using Object Literal or Map
+
+Here we will use a switch case to find fruits by color */
+
+const printFruits = (color) => {
+	switch (color) {
+		case 'red':
+			return ['apple', 'strawberry'];
+		case 'yellow':
+			return ['banana', 'pineapple'];
+		case 'purple':
+			return ['grape', 'plum'];
+		default:
+			return [];
+	}
+};
+console.log(printFruits(null)); // []
+console.log(printFruits('yellow')); // ['banana', 'pineapple']
