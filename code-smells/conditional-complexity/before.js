@@ -38,7 +38,7 @@ console.log(printMyAnimal('dog'));
 What if instead of the animal as a simple string, 
 it's an object with certain properties. */
 
-const printAnimalDetails = (animal) => {
+const getAnimalDetails = (animal) => {
 	let result; // declare a variable to store the final value
 
 	// condition 1: check if animal has a value
@@ -65,11 +65,11 @@ const printAnimalDetails = (animal) => {
 
 	return result;
 };
-console.log(printAnimalDetails()); // 'No animal'
-console.log(printAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
-console.log(printAnimalDetails({ type: 'dog', name: 'Lucy' })); // 'No animal gender'
+console.log(getAnimalDetails()); // 'No animal'
+console.log(getAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
+console.log(getAnimalDetails({ type: 'dog', name: 'Lucy' })); // 'No animal gender'
 console.log(
-	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
+	getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
 
 /* Before using Object Literal

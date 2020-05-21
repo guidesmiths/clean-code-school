@@ -30,18 +30,18 @@ We can refactor printAnimalDetails with ternary operators,
 && conditions, etc. but instead let's write more precise code 
 by using multiple return statements. */
 
-const printAnimalDetails = ({ type, name, gender } = {}) => {
+const getAnimalDetails = ({ type, name, gender } = {}) => {
 	if (!type) return 'No animal type';
 	if (!name) return 'No animal name';
 	if (!gender) return 'No animal gender';
 
 	return `${name} is a ${gender} ${type}`;
 };
-console.log(printAnimalDetails()); // 'No animal type'
-console.log(printAnimalDetails({ type: 'dog' })); // 'No animal name'
-console.log(printAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
+console.log(getAnimalDetails()); // 'No animal type'
+console.log(getAnimalDetails({ type: 'dog' })); // 'No animal name'
+console.log(getAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
 console.log(
-	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
+	getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
 ); // 'Lucy is a female dog'
 
 /* After using Object Literal
