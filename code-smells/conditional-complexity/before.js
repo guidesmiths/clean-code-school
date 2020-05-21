@@ -19,7 +19,7 @@ const getAnimalEmoji = (animal) => {
 		return '🐲';
 	}
 };
-console.log(getAnimalEmoji('dragon'));
+console.log(getAnimalEmoji('dragon')); // '🐲'
 
 /* Before Array.includes 
 
@@ -32,3 +32,42 @@ const printMyAnimal = (animal) => {
 	}
 };
 console.log(printMyAnimal('dog'));
+
+/* Before Early exit / Return early 
+
+What if instead of the animal as a simple string, 
+it's an object with certain properties. */
+
+const printAnimalDetails = (animal) => {
+	let result; // declare a variable to store the final value
+
+	// condition 1: check if animal has a value
+	if (animal) {
+		// condition 2: check if animal has a type property
+		if (animal.type) {
+			// condition 3: check if animal has a name property
+			if (animal.name) {
+				// condition 4: check if animal has a gender property
+				if (animal.gender) {
+					result = `${animal.name} is a ${animal.gender} ${animal.type}`;
+				} else {
+					result = 'No animal gender';
+				}
+			} else {
+				result = 'No animal name';
+			}
+		} else {
+			result = 'No animal type';
+		}
+	} else {
+		result = 'No animal';
+	}
+
+	return result;
+};
+console.log(printAnimalDetails()); // 'No animal'
+console.log(printAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
+console.log(printAnimalDetails({ type: 'dog', name: 'Lucy' })); // 'No animal gender'
+console.log(
+	printAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
+); // 'Lucy is a female dog'

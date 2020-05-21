@@ -8,7 +8,7 @@ const getGiraffeEmoji = () => '🦒';
 const getMonkeyEmoji = () => '🐵';
 const getUnicornEmoji = () => '🦄';
 const getDragonEmoji = () => '🐲';
-console.log(getFrogEmoji());
+console.log(getFrogEmoji()); // '🐸'
 
 /* After Array.includes 
 
