@@ -90,3 +90,23 @@ const printFruits = (color) => {
 };
 console.log(printFruits(null)); // []
 console.log(printFruits('yellow')); // ['banana', 'pineapple']
+
+/* Before using Default Parameters and Destructuring
+
+We always need to check for null/undefined value and 
+assign default value, or the compilation breaks. 
+
+const example = (param = 'defaultValue') => {...  
+  
+Can we assign a default parameter to an Object? */
+
+const printVegetableName = (vegetable)=> { 
+  if (vegetable && vegetable.name) {
+   console.log (vegetable.name);
+ } else {
+  console.log('unknown');
+ }
+}
+printVegetableName(undefined); // unknown
+printVegetableName({}); // unknown
+printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
