@@ -40,9 +40,7 @@ const getAnimalDetails = ({ type, name, gender } = {}) => {
 console.log(getAnimalDetails()); // 'No animal type'
 console.log(getAnimalDetails({ type: 'dog' })); // 'No animal name'
 console.log(getAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
-console.log(
-	getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
-); // 'Lucy is a female dog'
+console.log(getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })); // 'Lucy is a female dog'
 
 /* After using Object Literal
 
@@ -57,3 +55,16 @@ const printFruits = (color) => colorFruits[color] || [];
 console.log(printFruits(null)); // []
 console.log(printFruits('yellow')); // ['banana', 'pineapple']
 
+/* After using Default Parameters and Destructuring
+
+we can destructure the parameter using { name }, then we can use name as a variable 
+in our code instead of vegetable.name. We also assign an empty object {} as a default 
+value, otherwise it gives will an error when executing the line 
+printVegetableName(undefined) - Cannot destructure property name of undefined or null */
+
+const printVegetableName = ({ name } = {}) => {
+	console.log(name || 'unknown');
+};
+printVegetableName(undefined); // unknown
+printVegetableName({}); // unknown
+printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage

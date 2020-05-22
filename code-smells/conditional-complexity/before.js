@@ -68,9 +68,7 @@ const getAnimalDetails = (animal) => {
 console.log(getAnimalDetails()); // 'No animal'
 console.log(getAnimalDetails({ type: 'dog', gender: 'female' })); // 'No animal name'
 console.log(getAnimalDetails({ type: 'dog', name: 'Lucy' })); // 'No animal gender'
-console.log(
-	getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })
-); // 'Lucy is a female dog'
+console.log(getAnimalDetails({ type: 'dog', name: 'Lucy', gender: 'female' })); // 'Lucy is a female dog'
 
 /* Before using Object Literal
 
@@ -100,13 +98,13 @@ const example = (param = 'defaultValue') => {...
   
 Can we assign a default parameter to an Object? */
 
-const printVegetableName = (vegetable)=> { 
-  if (vegetable && vegetable.name) {
-   console.log (vegetable.name);
- } else {
-  console.log('unknown');
- }
-}
+const printVegetableName = (vegetable) => {
+	if (vegetable && vegetable.name) {
+		console.log(vegetable.name);
+	} else {
+		console.log('unknown');
+	}
+};
 printVegetableName(undefined); // unknown
 printVegetableName({}); // unknown
 printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
