@@ -68,3 +68,38 @@ const printVegetableName = ({ name } = {}) => {
 printVegetableName(undefined); // unknown
 printVegetableName({}); // unknown
 printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
+
+/* After using Optional Chaining and Nullish Coalescing 
+
+`const a = b?.c;` 
+https://github.com/tc39/proposal-optional-chaining
+`const a = b ?? c;` 
+https://github.com/tc39/proposal-nullish-coalescing */
+
+const car = {
+	model: 'Fiesta',
+	manufacturer: {
+		name: 'Ford',
+		address: {
+			street: 'Some Street Name',
+			number: '5555',
+			state: 'USA',
+		},
+	},
+};
+
+// to get the car model
+const model = car?.model ?? 'default model';
+
+// to get the manufacturer street
+const street = car?.manufacturer?.address?.street ?? 'default street';
+console.log(model); // 'Fiesta'
+console.log(street); // 'Some Street Name'
+
+// to check if the car manufacturer is from the USA
+const isManufacturerFromUSA = () => {
+	if (car?.manufacturer?.address?.state === 'USA') {
+		console.log('true');
+	}
+};
+console.log(isManufacturerFromUSA()); // 'true'

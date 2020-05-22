@@ -111,7 +111,9 @@ printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
 
 /* Before using Optional Chaining and Nullish Coalescing
 
+`const a = b?.c;` 
 https://github.com/tc39/proposal-optional-chaining
+`const a = b ?? c;` 
 https://github.com/tc39/proposal-nullish-coalescing */
 
 const car = {
@@ -160,4 +162,4 @@ const isManufacturerFromUSA = () => {
 		console.log('true');
 	}
 };
-checkCarManufacturerState(); // 'true'
+console.log(isManufacturerFromUSA()); // 'true'
