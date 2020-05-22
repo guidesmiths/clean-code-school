@@ -108,3 +108,56 @@ const printVegetableName = (vegetable) => {
 printVegetableName(undefined); // unknown
 printVegetableName({}); // unknown
 printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
+
+/* Before using Optional Chaining and Nullish Coalescing
+
+https://github.com/tc39/proposal-optional-chaining
+https://github.com/tc39/proposal-nullish-coalescing */
+
+const car = {
+	model: 'Fiesta',
+	manufacturer: {
+		name: 'Ford',
+		address: {
+			street: 'Some Street Name',
+			number: '5555',
+			state: 'USA',
+		},
+	},
+};
+
+// to get the car model
+const model = (car && car.model) || 'default model';
+
+// to get the manufacturer street
+const street =
+	(car &&
+		car.manufacturer &&
+		car.manufacturer.address &&
+		car.manufacturer.address.street) ||
+	'default street';
+
+// request an un-existing property
+const phoneNumber =
+	car &&
+	car.manufacturer &&
+	car.manufacturer.address &&
+	car.manufacturer.phoneNumber;
+console.log(model); // 'Fiesta'
+console.log(street); // 'Some Street Name'
+console.log(phoneNumber); // undefined
+
+/* So, if we wanted to print out if the car manufacturer is 
+from the USA, the code would look something like this: */
+
+const isManufacturerFromUSA = () => {
+	if (
+		car &&
+		car.manufacturer &&
+		car.manufacturer.address &&
+		car.manufacturer.address.state === 'USA'
+	) {
+		console.log('true');
+	}
+};
+checkCarManufacturerState(); // 'true'
