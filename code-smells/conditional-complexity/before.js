@@ -31,7 +31,7 @@ const printMyAnimal = (animal) => {
 		console.log(`I have a ${animal}`);
 	}
 };
-console.log(printMyAnimal('dog'));
+console.log(printMyAnimal('dog')); // 'I have a dog'
 
 /* Before using Early exit / Return early 
 

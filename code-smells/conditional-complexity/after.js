@@ -22,7 +22,7 @@ const printMyAnimal = (animal) => {
 		console.log(`I have a ${animal}`);
 	}
 };
-console.log(printAnimals('hamster'));
+console.log(printMyAnimal('hamster')); // I have a hamster
 
 /* After using Early exit / Return early 
 
