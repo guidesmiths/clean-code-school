@@ -10,8 +10,6 @@
 
 ## Type of Code Smell
 
-TODO: Check the type of your Code smell.
-
 - [x] Bloaters
 - [ ] Object-Orientation Abusers
 - [ ] Change Preventers
