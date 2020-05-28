@@ -72,9 +72,9 @@ printVegetableName({ name: 'cabbage', quantity: 2 }); // cabbage
 /* After using Optional Chaining and Nullish Coalescing 
 
 `const a = b?.c;` 
-https://github.com/tc39/proposal-optional-chaining
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 `const a = b ?? c;` 
-https://github.com/tc39/proposal-nullish-coalescing */
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator */
 
 const car = {
 	model: 'Fiesta',
