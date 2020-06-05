@@ -177,7 +177,7 @@ const row = Row('Betis', 'Joaquín';
 
 - [Replace Type Code with State/Strategy on Refactoring Guru](https://refactoring.guru/replace-type-code-with-state-strategy)
 
-- [Replace Type Code with State/Strategy on Clean Code School](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/replace-type-code-with-state-or-strategy) ([:movie_camera](https://youtu.be/L4vHWK12rIQ))
+- [Replace Type Code with State/Strategy on Clean Code School](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/replace-type-code-with-state-or-strategy) ([:movie_camera:](https://youtu.be/L4vHWK12rIQ))
 
 - [Replace Array with Object on Refactoring Guru](https://refactoring.guru/replace-array-with-object)
 
