@@ -56,7 +56,7 @@ Depending of the different signs of the code smell, there are several refactors 
 - If you have a large variety of primitive fields, it may be possible to logically group some of them into their own class. Even better, move the behavior associated with this data into the class too. For this task, try [Replace Data Value with Object](https://refactoring.guru/replace-data-value-with-object).
 
 From:
-```
+```java
 class User {
   private String userName;
   private String password;
@@ -68,13 +68,13 @@ class User {
 }
 ```
 To:
-```
+```java
 class Password {
   private String value;
 
   public Password(String value) {
     if (value.length() < 8) {
-      throw new InvalidPasswordException('too short!!);
+      throw new InvalidPasswordException('too short!!');
     }
     this.value = value;
   };
@@ -92,14 +92,19 @@ class User {
 
 User user = new User('leonardoDaVinci', 'leoInDaHous');
 ```
-```
-From:
+
+<details>
+  <summary>Or...</summary>
+  From:
+```javascript
 const User = (name, email) => ({
   name,
   email,
 });
+```
 
 To:
+```javascript
 const Name = value => { ... };
 const Email = value => { ... };
 
@@ -108,26 +113,33 @@ const User = (_name, _email) => ({
   email: Email(_email),
 });
 ```
+</details>
 
 - If the values of primitive fields are used in method parameters, go with [Introduce Parameter Object](https://refactoring.guru/introduce-parameter-object) ([:octocat:](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/introduce-parameter-object)) ([:movie_camera:](https://youtu.be/k-5M7oR5hLI)) or [Preserve Whole Object](https://refactoring.guru/preserve-whole-object).
-```
+
 From:
+```javascript
 const calculateSeconds = (startDate, endDate) => { ... };
+```
 
 To:
+```javascript
 const calculateSeconds = (dateRange) => { ... };
 ```
 
 - When complicated data is coded in variables, use [Replace Type Code with Class](https://refactoring.guru/replace-type-code-with-classs), [Replace Type Code with Subclasses](https://refactoring.guru/replace-type-code-with-subclasses) or [Replace Type Code with State/Strategy](https://refactoring.guru/replace-type-code-with-state-strategy) ([:octocat:](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/replace-type-code-with-state-or-strategy)) ([:movie_camera](https://youtu.be/L4vHWK12rIQ)).
 
 - If there are arrays among the variables, use [Replace Array with Object](https://refactoring.guru/replace-array-with-object).
-```
+
 From:
+```javascript
 const row = [];
 row[0] = 'Betis';
 row[1] = 'Joaquín';
+```
 
 To
+```javascript
 const Row = (teamName, teamCaptain) => ({
   teamName,
   teamCaptain,
