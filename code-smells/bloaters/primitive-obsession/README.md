@@ -140,7 +140,7 @@ const calculateSeconds = (dateRange) => { ... };
 </details>
 
 
-- When complicated data is coded in variables, use [Replace Type Code with Class](https://refactoring.guru/replace-type-code-with-classs), [Replace Type Code with Subclasses](https://refactoring.guru/replace-type-code-with-subclasses) or [Replace Type Code with State/Strategy](https://refactoring.guru/replace-type-code-with-state-strategy) ([:octocat:](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/replace-type-code-with-state-or-strategy)) ([:movie_camera](https://youtu.be/L4vHWK12rIQ)).
+- When complicated data is coded in variables, use [Replace Type Code with Class](https://refactoring.guru/replace-type-code-with-classs), [Replace Type Code with Subclasses](https://refactoring.guru/replace-type-code-with-subclasses) or [Replace Type Code with State/Strategy](https://refactoring.guru/replace-type-code-with-state-strategy) ([:octocat:](https://github.com/guidesmiths/clean-code-school/tree/master/refactors/replace-type-code-with-state-or-strategy)) ([:movie_camera:](https://youtu.be/L4vHWK12rIQ)).
 
 - If there are arrays among the variables, use [Replace Array with Object](https://refactoring.guru/replace-array-with-object).
 
