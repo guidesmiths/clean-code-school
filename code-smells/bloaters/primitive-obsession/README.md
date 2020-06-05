@@ -111,7 +111,7 @@ const User = (name, email) => ({
 
 To:
 
-```js
+```javascript
 const Name = value => { ... };
 const Email = value => { ... };
 
@@ -127,11 +127,13 @@ const User = (_name, _email) => ({
 <details>
   <summary>Example</summary>
   From:
+
 ```javascript
 const calculateSeconds = (startDate, endDate) => { ... };
 ```
 
 To:
+
 ```javascript
 const calculateSeconds = (dateRange) => { ... };
 ```
