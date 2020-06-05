@@ -58,6 +58,7 @@ Depending of the different signs of the code smell, there are several refactors 
 <details>
   <summary>Example</summary>
   From:
+
 ```java
 class User {
   private String userName;
@@ -70,6 +71,7 @@ class User {
 }
 ```
 To:
+
 ```java
 class Password {
   private String value;
@@ -99,6 +101,7 @@ User user = new User('leonardoDaVinci', 'leoInDaHous');
 <details>
   <summary>Or...</summary>
   From:
+
 ```javascript
 const User = (name, email) => ({
   name,
@@ -107,7 +110,8 @@ const User = (name, email) => ({
 ```
 
 To:
-```javascript
+
+```js
 const Name = value => { ... };
 const Email = value => { ... };
 
@@ -141,20 +145,20 @@ const calculateSeconds = (dateRange) => { ... };
 <details>
   <summary>Example</summary>
 From:
+
 ```javascript
 const row = [];
 row[0] = 'Betis';
 row[1] = 'Joaquín';
 ```
 
-To
+To:
+
 ```javascript
-const Row = (teamName, teamCaptain) => ({
-  teamName,
-  teamCaptain,
-});
-const row = Row('Betis', 'Joaquín';
-});
+const row = {
+  teamName: 'Betis',
+};
+row.teamCaptain: 'Joaquín',
 ```
 </details>
 
