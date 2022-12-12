@@ -8,7 +8,7 @@
   },
   "author": "Íñigo Marquínez <inigo.marquinez@guidesmiths.com>",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-swagger-generator": "^1.1.15"
   },
   "devDependencies": {
